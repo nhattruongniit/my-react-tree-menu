@@ -1,24 +1,229 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1>React tree menu with pure css</h1>
+     <div className="treemenu">
+        <ul className="treemenu__ul">
+          <li>
+            <input className="toggleMenu" type="checkbox" /> 
+            <span className="arrow arrow__collapse">
+              <svg width="7" height="12" viewBox="0 0 7 12">
+                <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+              </svg>
+            </span>
+            <span className="arrow arrow__expand">
+              <svg width="12" height="7" viewBox="0 0 12 7">
+                <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+              </svg>
+            </span>
+            <p>30 St Mary Axe Final</p>
+            <ul>
+              <li>
+                <input className="toggleMenu" type="checkbox" /> 
+                <span className="arrow arrow__collapse">
+                  <svg width="7" height="12" viewBox="0 0 7 12">
+                    <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+                  </svg>
+                </span>
+                <span className="arrow arrow__expand">
+                  <svg width="12" height="7" viewBox="0 0 12 7">
+                    <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+                  </svg>
+                </span>
+                <p>Sim 1</p>
+                <ul>
+                  <li>
+                      <input type="checkbox" value="pie" name="Pie Chart" />
+                      Pie Chart
+                  </li>
+                  <li>
+                      <input type="checkbox" value="bar" name="Bar heading" />
+                      Bar heading
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input className="toggleMenu" type="checkbox" /> 
+                <span className="arrow arrow__collapse">
+                  <svg width="7" height="12" viewBox="0 0 7 12">
+                    <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+                  </svg>
+                </span>
+                <span className="arrow arrow__expand">
+                  <svg width="12" height="7" viewBox="0 0 12 7">
+                    <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+                  </svg>
+                </span>
+                <p>Sim 2</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+          <input className="toggleMenu" type="checkbox" /> 
+            <span className="arrow arrow__collapse">
+              <svg width="7" height="12" viewBox="0 0 7 12">
+                <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+              </svg>
+            </span>
+            <span className="arrow arrow__expand">
+              <svg width="12" height="7" viewBox="0 0 12 7">
+                <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+              </svg>
+            </span>
+            <p>30 St Mary Axe Final</p>
+            <ul>
+              <li>
+                <input className="toggleMenu" type="checkbox" /> 
+                <span className="arrow arrow__collapse">
+                  <svg width="7" height="12" viewBox="0 0 7 12">
+                    <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+                  </svg>
+                </span>
+                <span className="arrow arrow__expand">
+                  <svg width="12" height="7" viewBox="0 0 12 7">
+                    <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+                  </svg>
+                </span>
+                <p>Sim 1</p>
+                <ul>
+                  <li>
+                      <input type="checkbox" value="pie" name="Pie Chart" />
+                      Pie Chart
+                  </li>
+                  <li>
+                      <input type="checkbox" value="bar" name="Bar heading" />
+                      Bar heading
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input className="toggleMenu" type="checkbox" /> 
+                <span className="arrow arrow__collapse">
+                  <svg width="7" height="12" viewBox="0 0 7 12">
+                    <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+                  </svg>
+                </span>
+                <span className="arrow arrow__expand">
+                  <svg width="12" height="7" viewBox="0 0 12 7">
+                    <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+                  </svg>
+                </span>
+                <p>Sim 2</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+          <input className="toggleMenu" type="checkbox" /> 
+            <span className="arrow arrow__collapse">
+              <svg width="7" height="12" viewBox="0 0 7 12">
+                <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+              </svg>
+            </span>
+            <span className="arrow arrow__expand">
+              <svg width="12" height="7" viewBox="0 0 12 7">
+                <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+              </svg>
+            </span>
+            <p>30 St Mary Axe Final</p>
+            <ul>
+              <li>
+                <input className="toggleMenu" type="checkbox" /> 
+                <span className="arrow arrow__collapse">
+                  <svg width="7" height="12" viewBox="0 0 7 12">
+                    <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+                  </svg>
+                </span>
+                <span className="arrow arrow__expand">
+                  <svg width="12" height="7" viewBox="0 0 12 7">
+                    <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+                  </svg>
+                </span>
+                <p>Sim 1</p>
+                <ul>
+                  <li>
+                      <input type="checkbox" value="pie" name="Pie Chart" />
+                      Pie Chart
+                  </li>
+                  <li>
+                      <input type="checkbox" value="bar" name="Bar heading" />
+                      Bar heading
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input className="toggleMenu" type="checkbox" /> 
+                <span className="arrow arrow__collapse">
+                  <svg width="7" height="12" viewBox="0 0 7 12">
+                    <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+                  </svg>
+                </span>
+                <span className="arrow arrow__expand">
+                  <svg width="12" height="7" viewBox="0 0 12 7">
+                    <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+                  </svg>
+                </span>
+                <p>Sim 2</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+          <input className="toggleMenu" type="checkbox" /> 
+            <span className="arrow arrow__collapse">
+              <svg width="7" height="12" viewBox="0 0 7 12">
+                <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+              </svg>
+            </span>
+            <span className="arrow arrow__expand">
+              <svg width="12" height="7" viewBox="0 0 12 7">
+                <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+              </svg>
+            </span>
+            <p>30 St Mary Axe Final</p>
+            <ul>
+              <li>
+                <input className="toggleMenu" type="checkbox" /> 
+                <span className="arrow arrow__collapse">
+                  <svg width="7" height="12" viewBox="0 0 7 12">
+                    <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+                  </svg>
+                </span>
+                <span className="arrow arrow__expand">
+                  <svg width="12" height="7" viewBox="0 0 12 7">
+                    <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+                  </svg>
+                </span>
+                <p>Sim 1</p>
+                <ul>
+                  <li>
+                      <input type="checkbox" value="pie" name="Pie Chart" />
+                      Pie Chart
+                  </li>
+                  <li>
+                      <input type="checkbox" value="bar" name="Bar heading" />
+                      Bar heading
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input className="toggleMenu" type="checkbox" /> 
+                <span className="arrow arrow__collapse">
+                  <svg width="7" height="12" viewBox="0 0 7 12">
+                    <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+                  </svg>
+                </span>
+                <span className="arrow arrow__expand">
+                  <svg width="12" height="7" viewBox="0 0 12 7">
+                    <path d="M6.002 5.55L11.27 0l.726.685L6.003 7 0 .685.726 0z" />
+                  </svg>
+                </span>
+                <p>Sim 2</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
