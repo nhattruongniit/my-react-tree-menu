@@ -7,121 +7,47 @@
   "documents": [
     {
       "id": 1,
-      "name": "Document 1"
+      "key": "document-1",
+      "type": "documents",
+      "label": "Document 1",
+      "children": []
     },
     {
       "id": 2,
-      "name": "Document 2"
+      "key": "document-2",
+      "type": "documents",
+      "label": "Document 2",
+      "children": ["simulation-2-1", "simulation-2-2"]
     },
     {
-      "id": 3,
-      "name": "Document 3"
-    }
-  ],
-  "simulators": [
-    {
-      "id": 1,
-      "data": [
-        {
-          "id": 1,
-          "name": "Simulator 1-1"
-        },
-        {
-          "id": 2,
-          "name": "Simulator 1-2"
-        },
-        {
-          "id": 3,
-          "name": "Simulator 1-3"
-        }
-      ]
+      "id": 21,
+      "key": "simulation-2-1",
+      "type": "simulation",
+      "label": "Simulation 2-1",
+      "parentKey": "document-2",
+      "children": ["chart-1", "chart-2"]
     },
     {
-      "id": 2,
-      "data": [
-        {
-          "id": 1,
-          "name": "Simulator 2-1"
-        },
-        {
-          "id": 2,
-          "name": "Simulator 2-2"
-        },
-        {
-          "id": 3,
-          "name": "Simulator 2-3"
-        }
-      ]
+      "id": 22,
+      "key": "simulation-2-2",
+      "type": "simulation",
+      "label": "Simulation 2-2",
+      "parentKey": "document-2",
+      "children": []
     },
     {
-      "id": 3,
-      "data": [
-        {
-          "id": 1,
-          "name": "Simulator 3-1"
-        },
-        {
-          "id": 2,
-          "name": "Simulator 3-2"
-        },
-        {
-          "id": 3,
-          "name": "Simulator 3-3"
-        }
-      ]
-    }
-  ],
-  "charts": [
-    {
-      "id": 1,
-      "data": [
-        {
-          "id": 1,
-          "name": "Chart 1-1"
-        },
-        {
-          "id": 2,
-          "name": "Chart 1-2"
-        },
-        {
-          "id": 3,
-          "name": "Chart 1-3"
-        }
-      ]
+      "id": 211,
+      "key": "chart-1",
+      "type": "chart",
+      "parentKey": "simulation-2-1",
+      "label": "My awesome chart 1"
     },
     {
-      "id": 2,
-      "data": [
-        {
-          "id": 1,
-          "name": "Chart 2-1"
-        },
-        {
-          "id": 2,
-          "name": "Chart 2-2"
-        },
-        {
-          "id": 3,
-          "name": "Chart 2-3"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "data": [
-        {
-          "id": 1,
-          "name": "Chart 3-1"
-        },
-        {
-          "id": 2,
-          "name": "Chart 3-2"
-        },
-        {
-          "id": 3,
-          "name": "Chart 3-3"
-        }
-      ]
+      "id": 212,
+      "key": "chart-2",
+      "type": "chart",
+      "parentKey": "simulation-2-1",
+      "label": "My awesome chart 2"
     }
   ]
 }

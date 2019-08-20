@@ -2,19 +2,13 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
 // reducers
-import {
-  actFetchDocuments,
-  actFetchSimulatorByDocumentId,
-  actFetchChartBySimId
-} from "./reducers";
+import { actFetchDocuments, actFetchSimulatorByDocumentId } from "./reducers";
 
 const TreeMenu = ({
   documents,
   simulators,
-  charts,
   actFetchDocuments,
-  actFetchSimulatorByDocumentId,
-  actFetchChartBySimId
+  actFetchSimulatorByDocumentId
 }) => {
   useEffect(() => {
     actFetchDocuments();
@@ -25,14 +19,6 @@ const TreeMenu = ({
     const idExisted = simulators.some(val => val.id === id);
     if (checked && !idExisted) {
       actFetchSimulatorByDocumentId(id);
-    }
-  };
-
-  const onChangeSim = id => e => {
-    const { checked } = e.target;
-    const idExisted = charts.some(val => val.id === id);
-    if (checked && !idExisted) {
-      actFetchChartBySimId(id);
     }
   };
 
@@ -62,11 +48,7 @@ const TreeMenu = ({
                   <p>{val.name}</p>
                   <ul>
                     <li>
-                      <input
-                        className="toggleMenu"
-                        type="checkbox"
-                        onChange={onChangeSim(val.id)}
-                      />
+                      <input className="toggleMenu" type="checkbox" />
                       <span className="arrow arrow__collapse">
                         <svg width="7" height="12" viewBox="0 0 7 12">
                           <path d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z" />
@@ -131,8 +113,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
   actFetchDocuments,
-  actFetchSimulatorByDocumentId,
-  actFetchChartBySimId
+  actFetchSimulatorByDocumentId
 };
 
 export default connect(
