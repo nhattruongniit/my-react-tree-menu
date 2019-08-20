@@ -7,7 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-ul, li, p {
+ul,
+li,
+p {
   margin: 0;
   padding: 0;
 }
@@ -31,13 +33,13 @@ code {
 .treemenu__ul li {
   position: relative;
   cursor: pointer;
-  border-top: 1px solid #DFE3E6;
+  border-top: 1px solid #dfe3e6;
   padding: 10px 0;
   font: 16px/24px IBM Plex Sans;
 }
 
 .treemenu__ul li:last-child {
-  border-bottom: 1px solid #DFE3E6;
+  border-bottom: 1px solid #dfe3e6;
 }
 
 .treemenu__ul li input.toggleMenu {
@@ -61,13 +63,13 @@ code {
   opacity: 0;
   top: 8px;
 }
-.treemenu__ul li  input.toggleMenu:checked ~ .arrow__collapse {
+.treemenu__ul li input.toggleMenu:checked ~ .arrow__collapse {
   opacity: 0;
 }
-.treemenu__ul li  input.toggleMenu:checked ~ .arrow__expand {
+.treemenu__ul li input.toggleMenu:checked ~ .arrow__expand {
   opacity: 1;
 }
-.treemenu__ul li  input.toggleMenu:checked ~ ul  {
+.treemenu__ul li input.toggleMenu:checked ~ ul {
   display: block;
 }
 
