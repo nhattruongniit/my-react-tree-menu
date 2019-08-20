@@ -17,34 +17,23 @@ const TreeMenu = ({
   //   }
   // }
 
-  documents.map(val => {
-    if (!val.parentKey) {
-      newDocuments.push(val);
-    }
-    if (val.type === "simulation") {
-      newDocuments = [...newDocuments, val];
-    }
-  });
-  console.log(newDocuments);
+  const mapArray = data => {
+    const normalize = normalData => {
+      const result = {};
+      for (const val of data) {
+        if (val.type === "simulation") {
+          console.log(val);
+          result[val.type] = val;
+        }
+      }
+      return result;
+    };
+    return normalize(data);
+  };
 
-  // const result = documents.reduce((acc, curr) => {
-  //   console.log("curr: ", curr);
-  //   if (!curr.parentKey) {
-  //     acc = [...acc, curr];
-  //   }
-  //   if (curr.type === "simulation") {
-  //     acc = [
-  //       ...acc,
-  //       {
-  //         ...curr,
-  //         simulation: 1
-  //       }
-  //     ];
-  //   }
-  //   return acc;
-  // }, []);
+  const output = mapArray(documents);
 
-  // console.log("result: ", result);
+  console.log("result: ", output);
 
   useEffect(() => {
     actFetchDocuments();
