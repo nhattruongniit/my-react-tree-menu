@@ -4,10 +4,10 @@ export const fetchDocuments = () => {
   return request("/documents");
 };
 
-export const fetchSimulator = id => {
-  return request(`/simulators/${id}`);
+export const fetchSimulator = () => {
+  return request(`/simulators`);
 };
 
-export const fetchCharts = id => {
-  return request(`/charts/${id}`);
+export const fetchCharts = () => {
+  return request(`/charts`);
 };

@@ -13,6 +13,9 @@ const FETCH_DOCUMENT_FAILURE = "FETCH_DOCUMENT_FAILURE";
 const FETCH_SIMULATOR_SUCCESS = "FETCH_SIMULATOR_SUCCESS";
 const FETCH_SIMULATOR_FAILURE = "FETCH_SIMULATOR_FAILURE";
 
+const FETCH_CHARTS_SUCCESS = "FETCH_CHARTS_SUCCESS";
+const FETCH_CHARTS_FAILURE = "FETCH_SCHARTS_FAILURE";
+
 export const actFetchDocuments = () => async dispatch => {
   try {
     const { data } = await api.fetchDocuments();
@@ -22,14 +25,24 @@ export const actFetchDocuments = () => async dispatch => {
   }
 };
 
-export const actFetchSimulatorByDocumentId = id => async dispatch => {
+export const actFetchSimulator = () => async dispatch => {
   try {
-    const { data } = await api.fetchSimulator(id);
+    const { data } = await api.fetchSimulator();
     dispatch({ type: FETCH_SIMULATOR_SUCCESS, payload: data });
   } catch (err) {
     dispatch({ type: FETCH_SIMULATOR_FAILURE, payload: [] });
   }
 };
+
+export const actFetchCharts = () => async dispatch => {
+  try {
+    const { data } = await api.fetchCharts();
+    dispatch({ type: FETCH_CHARTS_SUCCESS, payload: data });
+  } catch (err) {
+    dispatch({ type: FETCH_CHARTS_FAILURE, payload: [] });
+  }
+};
+
 
 export default function reducer(state = initialState, { type, payload }) {
   switch (type) {
@@ -48,13 +61,25 @@ export default function reducer(state = initialState, { type, payload }) {
     case FETCH_SIMULATOR_SUCCESS: {
       return {
         ...state,
-        simulators: [...state.simulators, payload]
+        simulators: payload
       };
     }
     case FETCH_SIMULATOR_FAILURE: {
       return {
         ...state,
-        simulators: [...state.simulators, payload || []]
+        simulators: []
+      };
+    }
+    case FETCH_CHARTS_SUCCESS: {
+      return {
+        ...state,
+        charts: payload
+      };
+    }
+    case FETCH_CHARTS_FAILURE: {
+      return {
+        ...state,
+        charts:  []
       };
     }
     default:

@@ -1,53 +1,89 @@
 {
-  "user": {
-    "id": 1239483822,
-    "name": "truong nguyen",
-    "level": "Standard"
-  },
   "documents": [
     {
+      "id": 8983,
+      "document_name": "House_06_nomat",
+      "version_id": 1,
+      "mode": "free",
+      "project_id": 32,
+      "created_at": "2019-08-19 13:29:05",
+      "updated_at": "2019-08-19 13:29:05"
+    },
+    {
+      "id": 8992,
+      "document_name": "idf document 2",
+      "version_id": 1,
+      "mode": "free",
+      "project_id": 32,
+      "created_at": "2019-08-19 14:45:58",
+      "updated_at": "2019-08-19 14:45:58"
+    },
+    {
+      "id": 9002,
+      "document_name": "idf document 3",
+      "version_id": 1,
+      "mode": "free",
+      "project_id": 32,
+      "created_at": "2019-08-19 14:46:48",
+      "updated_at": "2019-08-19 14:46:48"
+    }
+  ],
+  "simulators": [
+    {
+      "id": 8,
+      "simulation_name": "simulaton 7",
+      "document_id": 9002,
+      "status": "error",
+      "progress": 0,
+      "created_at": "2019-08-19 15:31:47",
+      "updated_at": "2019-08-19 15:31:52"
+    },
+    {
+      "id": 9,
+      "simulation_name": "simulaton 8",
+      "document_id": 8992,
+      "status": "error",
+      "progress": 0,
+      "created_at": "2019-08-19 15:31:53",
+      "updated_at": "2019-08-19 15:31:59"
+    },
+    {
+      "id": 10,
+      "simulation_name": "simulaton 9",
+      "document_id": 9002,
+      "status": "error",
+      "progress": 0,
+      "created_at": "2019-08-19 15:32:04",
+      "updated_at": "2019-08-19 15:32:09"
+    },
+    {
+      "id": 11,
+      "simulation_name": "simulaton 10",
+      "document_id": 8983,
+      "status": "error",
+      "progress": 0,
+      "created_at": "2019-08-19 15:32:08",
+      "updated_at": "2019-08-19 15:32:14"
+    }
+  ],
+  "charts":  [
+    {
       "id": 1,
-      "key": "document-1",
-      "type": "documents",
-      "label": "Document 1",
-      "children": []
+      "chart_name": "test 3",
+      "parent_simulation_id": 8,
+      "type": "string",
+      "options": "string",
+      "created_at": "2019-08-20 14:40:46",
+      "updated_at": "2019-08-20 14:40:46"
     },
     {
       "id": 2,
-      "key": "document-2",
-      "type": "documents",
-      "label": "Document 2",
-      "children": ["simulation-2-1", "simulation-2-2"]
-    },
-    {
-      "id": 21,
-      "key": "simulation-2-1",
-      "type": "simulation",
-      "label": "Simulation 2-1",
-      "parentKey": "document-2",
-      "children": ["chart-1", "chart-2"]
-    },
-    {
-      "id": 22,
-      "key": "simulation-2-2",
-      "type": "simulation",
-      "label": "Simulation 2-2",
-      "parentKey": "document-2",
-      "children": []
-    },
-    {
-      "id": 211,
-      "key": "chart-1",
-      "type": "chart",
-      "parentKey": "simulation-2-1",
-      "label": "My awesome chart 1"
-    },
-    {
-      "id": 212,
-      "key": "chart-2",
-      "type": "chart",
-      "parentKey": "simulation-2-1",
-      "label": "My awesome chart 2"
+      "chart_name": "test 123",
+      "parent_simulation_id": 9,
+      "type": "bar",
+      "options": "string",
+      "created_at": "2019-08-20 14:41:08",
+      "updated_at": "2019-08-20 14:41:08"
     }
   ]
 }
