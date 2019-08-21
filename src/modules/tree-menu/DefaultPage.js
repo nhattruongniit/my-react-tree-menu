@@ -2,7 +2,11 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
 // reducers
-import { actFetchDocuments, actFetchSimulator, actFetchCharts } from "./reducers";
+import {
+  actFetchDocuments,
+  actFetchSimulator,
+  actFetchCharts
+} from "./reducers";
 
 const TreeMenu = ({
   documents,
@@ -21,13 +25,13 @@ const TreeMenu = ({
   const getSimByDocId = document => {
     const getSim = simulators.filter(val => val.document_id === document.id);
     return getSim;
-  }
+  };
 
   const getChartsBySimId = sim => {
     const getSim = charts.filter(val => val.parent_simulation_id === sim.id);
     return getSim;
-  }
-  
+  };
+
   // const onChangeDocument = id => e => {
   //   const { checked } = e.target;
   //   const idExisted = simulators.some(val => val.id === id);
@@ -36,14 +40,20 @@ const TreeMenu = ({
   //   }
   // };
 
+  const onChangeChart = e => {
+    const { id } = e.target;
+
+    console.log("====chart", id);
+  };
+
   return (
     <>
       <div className="treemenu">
+        <h1>React tree menu with pure css</h1>
         <ul className="treemenu__ul">
-          {/* {renderSubTree(newDocuments)} */}
           {documents.map(doc => {
             return (
-              <li>
+              <li key={doc.id}>
                 <input className="toggleMenu" type="checkbox" />
                 <span className="arrow arrow__collapse">
                   <svg width="7" height="12" viewBox="0 0 7 12">
@@ -59,7 +69,7 @@ const TreeMenu = ({
                 <ul>
                   {getSimByDocId(doc).map(sim => {
                     return (
-                      <li>
+                      <li key={sim.id}>
                         <input className="toggleMenu" type="checkbox" />
                         <span className="arrow arrow__collapse">
                           <svg width="7" height="12" viewBox="0 0 7 12">
@@ -75,17 +85,22 @@ const TreeMenu = ({
                         <ul>
                           {getChartsBySimId(sim).map(chart => {
                             return (
-                              <li>
-                                <input type="checkbox" value="pie" name="Pie Chart" />
+                              <li key={chart.id}>
+                                <input
+                                  id={chart.id}
+                                  type="checkbox"
+                                  value={chart.chart_name}
+                                  name="Pie Chart"
+                                  onChange={onChangeChart}
+                                />
                                 {chart.chart_name}
                               </li>
-                            )
+                            );
                           })}
                         </ul>
                       </li>
-                    )
+                    );
                   })}
-                  
                 </ul>
               </li>
             );
